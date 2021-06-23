@@ -25,6 +25,7 @@ Data/
 
 # MRTK which is imported from an asset package
 MRTK/
+MRTK.meta
 Microsoft.MixedReality.Toolkit.*
 
 # Unity3D Generated File On Crash Reports

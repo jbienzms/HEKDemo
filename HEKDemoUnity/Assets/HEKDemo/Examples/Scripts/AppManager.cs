@@ -17,10 +17,10 @@ public class AppManager : MonoBehaviour
     /// </summary>
     private void LoadConfiguration()
     {
-        // If there's any demo configuration data in the project, get a reference to it
+        // If there's a demo config in the project, get a reference to it
         demoData = MyDemoData.Instance;
 
-        // Demo path or regular path?
+        // Use demo config or regular code path?
         if (demoData != null)
         {
             Debug.Log($"Demo configuration found. User Name: {demoData.UserName}");
