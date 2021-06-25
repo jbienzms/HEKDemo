@@ -28,6 +28,10 @@ MRTK/
 MRTK.meta
 Microsoft.MixedReality.Toolkit.*
 
+# TextMesh Pro Package Files
+TextMesh Pro/
+TextMesh Pro.meta
+
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 Lib/*.suo
