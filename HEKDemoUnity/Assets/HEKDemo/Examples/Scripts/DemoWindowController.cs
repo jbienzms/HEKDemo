@@ -37,12 +37,19 @@ public class DemoWindowController : MonoBehaviour
         // Load versions
         unityAppVersionText.text = Application.version;
         unityRuntimeText.text = Application.unityVersion;
-        #if WINDOWS_UWP
-        var ver = Windows.ApplicationModel.Package.Current.Id.Version;
-        uwpAppVersionText.text = $"{ver.Build}.{ver.Major}.{ver.Minor}.{ver.Revision}";
-        #else
-        uwpAppVersionText.text = "(Not UWP Build)";
-        #endif
+        if (Application.isEditor)
+        {
+            uwpAppVersionText.text = "Running in Editor";
+        }
+        else
+        {
+            #if WINDOWS_UWP
+            var ver = Windows.ApplicationModel.Package.Current.Id.Version;
+            uwpAppVersionText.text = $"{ver.Build}.{ver.Major}.{ver.Minor}.{ver.Revision}";
+            #else
+            uwpAppVersionText.text = "Not UWP Build";
+            #endif
+        }
 
         // Load demo status
         demoData = MyDemoData.Instance;
